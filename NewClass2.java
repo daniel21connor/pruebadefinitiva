@@ -15,12 +15,12 @@ public class NewClass2 {
     
       public void registrogradoo(String tipo ){
         indiceVector= indiceVector+1;
-        registroCodigoGrado[indiceVector]= " * " +" codigo del Grado--> "+ tipo;
+        registroCodigoGrado[indiceVector]= " * " +" codigo del Grado---> "+ tipo;
         
      }
      public void registro(String tipo ){
         indiceVector= indiceVector+1;
-        vectorDescripcion[indiceVector]=   " * " +" Descripcion--> "+ tipo;
+        vectorDescripcion[indiceVector]=   " * " +" Descripcion---> "+ tipo;
         } 
    
 }

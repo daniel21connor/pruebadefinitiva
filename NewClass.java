@@ -8,6 +8,7 @@ public class NewClass extends NewClass1{
     private String [] vectorAlias;
     private String [] vectorCorreo;
     private String [] vectorCodigo;
+    private String [] vectorApellido;
 
     
     public NewClass(){
@@ -17,46 +18,44 @@ public class NewClass extends NewClass1{
        vectorNombre=new String [100];
        vectorTransacciones= new String[100];
          this.indiceVector=0;
-        
+        vectorApellido=new String [100];
     
 }
     
-    public void alias(String nombre){
-      this.registrarnombre(nombre);
-      
-      }
-      public void nombre(String nombre){
-      this.registrarnombre(nombre);
-      
-      }
+     
     
-    
+     public void registrarnombre(String tipo ){
+        indiceVector= indiceVector+1;
+        System.out.println("----------------------------------------");
+        vectorNombre[indiceVector]=   " * " +" Nombre---> "+ tipo;
+        
+    }
         public void registraralias(String tipo ){
         indiceVector= indiceVector+1;
         vectorAlias[indiceVector]=     " * " +" Alias--> "+ tipo;
         
     }
-       
-    public void registrarnombre(String tipo ){
+          public void registrarapellido(String tipo ){
         indiceVector= indiceVector+1;
         System.out.println("----------------------------------------");
-        vectorNombre[indiceVector]=   " * " +" Nombre--> "+ tipo;
+        vectorApellido[indiceVector]=   " * " +" Apelldio---> "+ tipo;
         
     }
-     public void registrocodigo(String tipo ){
+   
+     public void registroCodigo(String tipo ){
         indiceVector= indiceVector+1;
  
-        vectorCodigo[indiceVector]=   " * " +  " codigo-->"+ tipo;
+        vectorCodigo[indiceVector]=   " * " +  " codigo--->"+ tipo;
         
     }
-    public void registrocorreo(String tipo ){
+    public void registroCorreo(String tipo ){
         indiceVector= indiceVector+1;
-        vectorCorreo[indiceVector]=    " * " + " correo--> "+ tipo;
+        vectorCorreo[indiceVector]=    " * " + " correo---> "+ tipo;
         
     }
     public void registrotelefono(int tipo ){
         indiceVector= indiceVector+1;
-        vectorTransacciones [indiceVector]= " * " +  " telefono--> "+ tipo;
+        vectorTransacciones [indiceVector]= " * " +  " telefono---> "+ tipo;
       
         
     }
@@ -96,7 +95,7 @@ public class NewClass extends NewClass1{
             } 
         }      
      
-     public void mostrarnombre(){
+     public void mostrarNombre(){
       
             for (int i=1; i<vectorNombre.length;i++){
                 if(vectorNombre[i] != null){
@@ -112,7 +111,23 @@ public class NewClass extends NewClass1{
                 }   
             } 
         }
-          public void mostraralias(){
+             public void mostrarApellido(){
+      
+            for (int i=1; i<vectorApellido.length;i++){
+                if(vectorApellido[i] != null){
+               
+                    System.out.println("Regitro ="+ vectorApellido[i]);
+                   
+                }
+            }
+            System.out.println("");
+            for(String transaccion : vectorApellido){
+                if(transaccion != null){
+                   
+                }   
+            } 
+        }
+          public void mostrarAlias(){
       
             for (int i=1; i<vectorAlias.length;i++){
                 if(vectorAlias[i] != null){
@@ -128,7 +143,7 @@ public class NewClass extends NewClass1{
                 }   
             } 
         }
-      public void mostrarcorreo(){
+      public void mostrarCorreo(){
       
             for (int i=1; i<vectorCorreo.length;i++){
                 if(vectorCorreo[i] != null){
@@ -145,7 +160,7 @@ public class NewClass extends NewClass1{
             } 
         }
      
-       public void mostrarcodigo(){
+       public void mostrarCodigo(){
       
             for (int i=1; i<vectorCodigo.length;i++){
                 if(vectorCodigo[i] != null){
@@ -162,7 +177,7 @@ public class NewClass extends NewClass1{
             } 
         }
      
-             public void mostrarcurso(){
+             public void mostrarCurso(){
       
             for (int i=1; i<vectorNombreCurso.length;i++){
                 if(vectorNombreCurso[i] != null){
@@ -180,7 +195,7 @@ public class NewClass extends NewClass1{
         }
              
              
-                       public void mostrarcursocodigo(){
+                       public void mostrarCursoCodigo(){
       
             for (int i=1; i<vectorCodigoCurso.length;i++){
                 if(vectorCodigoCurso[i] != null){
